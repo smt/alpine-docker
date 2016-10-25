@@ -1,7 +1,7 @@
 FROM ruby:alpine
 MAINTAINER Stephen M. Tudor <smt@smt.io>
 
-# t() {
+# twitter() {
 #     docker run -it --rm \
 #         -v ~/.trc:/root/.trc \
 #         smtudor/t $@
