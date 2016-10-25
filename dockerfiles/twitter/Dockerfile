@@ -4,7 +4,7 @@ MAINTAINER Stephen M. Tudor <smt@smt.io>
 # twitter() {
 #     docker run -it --rm \
 #         -v ~/.trc:/root/.trc \
-#         smtudor/t $@
+#         smtudor/twitter $@
 # }
 
 RUN apk add --no-cache \
