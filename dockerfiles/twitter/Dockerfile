@@ -7,10 +7,10 @@ MAINTAINER Stephen M. Tudor <smt@smt.io>
 #         smtudor/t $@
 # }
 
-RUN	apk add --no-cache \
+RUN apk add --no-cache \
     ca-certificates
 
-RUN	set -x \
+RUN set -x \
     && apk add --no-cache --virtual .build-deps \
     build-base \
     && gem install io-console t --no-rdoc --no-ri \
