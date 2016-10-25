@@ -1,0 +1,21 @@
+FROM ruby:alpine
+MAINTAINER Stephen M. Tudor <smt@smt.io>
+
+# t() {
+#     docker run -it --rm \
+#         -v ~/.trc:/root/.trc \
+#         smtudor/t $@
+# }
+
+RUN	apk add --no-cache \
+    ca-certificates
+
+RUN	set -x \
+    && apk add --no-cache --virtual .build-deps \
+    build-base \
+    && gem install io-console t --no-rdoc --no-ri \
+    && apk del .build-deps
+
+VOLUME /root/.trc
+
+ENTRYPOINT ["t"]
