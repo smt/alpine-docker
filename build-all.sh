@@ -10,7 +10,7 @@ build_image(){
     build_dir=$3
 
     echo "Building ${REPO_URL}/${base}:${suite} for context ${build_dir}"
-    docker build --rm --force-rm -t ${REPO_URL}/${base}:${suite} ${build_dir} || return 1
+    docker build --rm --force-rm --no-cache -t ${REPO_URL}/${base}:${suite} ${build_dir} || return 1
 
     # on successful build, push the image
     echo "                       ---                                   "
